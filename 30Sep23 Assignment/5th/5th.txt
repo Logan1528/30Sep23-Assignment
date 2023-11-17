@@ -1,0 +1,53 @@
+5. Explain the z-index, with a code example.
+
+z-index
+	The z-index property specifies the stack order of an element.
+An element with greater stack order is always in front of an element 
+with a lower stack order.
+
+Ex :
+
+HTML
+
+<div class="wrapper">
+  <div class="dashed-box">Dashed box</div>
+  <div class="gold-box">Gold box</div>
+  <div class="green-box">Green box</div>
+</div>
+
+CSS
+
+.wrapper {
+  position: relative;
+}
+
+.dashed-box {
+  position: relative;
+  top:0px;
+  left:50px;
+  right:50px;
+  height:50px;
+  width:50px;
+  z-index: 1;
+  border: dashed;
+}
+.gold-box {
+  position: absolute;
+  z-index: 3; 
+  background: gold;
+  top:15px;
+  left:80px;
+  right:0px;
+  height:50px;
+  width:50px;
+}
+.green-box {
+  position: absolute;
+  background:lightgreen;
+  z-index: 2; 
+  top:35px;
+  left:120px;
+  right:0px;
+  height:50px;
+  width:50px;  
+}
